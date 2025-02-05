@@ -64,6 +64,10 @@ flutter:
   assets:
     - assets/tiles/
     - assets/images/Terrain/
+    - assets/images/Main_Characters/Ninja_Frog/
+#    - assets/images/Main_Characters/Mask_Dude/
+#    - assets/images/Main_Characters/Pink_Man/
+#    - assets/images/Main_Characters/Virtual_Guy/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
