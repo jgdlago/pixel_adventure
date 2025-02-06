@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flame/components.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:pixel_adventure/pixel_adventure.dart';
 
@@ -20,7 +19,10 @@ class Player extends SpriteAnimationGroupComponent
     with HasGameRef<PixelAdventure>, KeyboardHandler {
 
   String character;
-  Player({position, required this.character}) : super(position: position);
+  Player({
+    position,
+    this.character = 'Ninja_Frog'
+  }) : super(position: position);
 
   final double stepTime = 0.05;
   late final SpriteAnimation idleAnimation;
