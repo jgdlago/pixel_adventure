@@ -2,12 +2,25 @@ import 'package:pixel_adventure/components/collision_block.dart';
 import 'package:pixel_adventure/components/player.dart';
 
 bool checkCollision(Player player, CollisionBlock block) {
+  final hitbox = player.hitbox;
+  final playerX = player.position.x + hitbox.offsetX;
+  final playerY = player.position.y + hitbox.offsetY;
+  final playerWidth = hitbox.width;
+  final playerHeight = hitbox.height;
 
-  final fixedX = player.scale.x < 0 ? player.position.x - player.width : player.position.x;
+  final blockX = block.x;
+  final blockY = block.y;
+  final blockWidth = block.width;
+  final blockHeight = block.height;
 
-  return (player.position.y < block.position.y + block.height
-      && player.position.y + player.height > block.position.y
-      && fixedX < block.position.x + block.width
-      && fixedX + player.width > block.position.x
-  );
+  final fixedX = player.scale.x < 0
+    ? playerX - (hitbox.offsetX * 2) - playerWidth
+      : playerX;
+
+  final fixedY = block.isPlatform ? playerY + playerHeight : playerY;
+
+  return (fixedY < blockY + blockHeight &&
+    playerY + playerHeight > blockY &&
+    fixedX < blockX + blockWidth &&
+    fixedX + playerWidth > blockX);
 }

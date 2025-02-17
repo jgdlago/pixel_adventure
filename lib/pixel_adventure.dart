@@ -15,10 +15,10 @@ class PixelAdventure extends FlameGame
   @override
   Color backgroundColor() => const Color(0xFF211F30);
   late final CameraComponent cam;
-  Player player = Player(character: 'Mask_Dude');
+  Player player = Player(character: 'Ninja_Frog');
   late JoystickComponent joystick;
   bool showJoystick = Platform.isAndroid || Platform.isIOS;
-
+  // bool showJoystick = false;
   @override
   FutureOr<void> onLoad() async {
 
