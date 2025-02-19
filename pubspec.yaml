@@ -64,6 +64,7 @@ flutter:
   assets:
     - assets/tiles/
     - assets/images/Terrain/
+    - assets/images/Background/
     - assets/images/HUD/
     - assets/images/Main_Characters/Ninja_Frog/
     - assets/images/Main_Characters/Mask_Dude/

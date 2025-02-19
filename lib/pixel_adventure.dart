@@ -17,8 +17,8 @@ class PixelAdventure extends FlameGame
   late final CameraComponent cam;
   Player player = Player(character: 'Ninja_Frog');
   late JoystickComponent joystick;
-  bool showJoystick = Platform.isAndroid || Platform.isIOS;
-  // bool showJoystick = false;
+  // bool showJoystick = Platform.isAndroid || Platform.isIOS;
+  bool showJoystick = false;
   @override
   FutureOr<void> onLoad() async {
 
